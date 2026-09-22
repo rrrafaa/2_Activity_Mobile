@@ -12,7 +12,6 @@ import androidx.compose.ui.unit.dp
 fun SecondScreen(
     nim: String,
     nama: String,
-    label: String,
     onBackClick: () -> Unit
 ) {
     Column(
@@ -27,7 +26,7 @@ fun SecondScreen(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Text(text = "Teks dari Activity 1: $label")
+        Text(text = "Screen 2")
 
         Spacer(modifier = Modifier.height(24.dp))
 

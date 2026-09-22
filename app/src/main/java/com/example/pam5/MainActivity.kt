@@ -1,10 +1,13 @@
 package com.example.pam5
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.pam5.ui.screen.FirstScreen
+import com.example.pam5.ui.screen.SecondScreen
 import com.example.pam5.ui.theme.PAM5Theme
 
 class MainActivity : ComponentActivity() {
@@ -16,15 +19,31 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PAM5Theme {
-                FirstScreen(
-                    nim = mahasiswaNim,
-                    nama = mahasiswaNama,
-                    onNextClick = { inputText ->
-                        val intent = Intent(this, SecondActivity::class.java)
-                        intent.putExtra("EXTRA_TEXT", inputText)
-                        startActivity(intent)
+                val navController = rememberNavController()
+
+                NavHost(
+                    navController = navController,
+                    startDestination = "first"
+                ) {
+                    composable("first") {
+                        FirstScreen(
+                            nim = mahasiswaNim,
+                            nama = mahasiswaNama,
+                            onNextClick = {
+                                navController.navigate("second")
+                            }
+                        )
                     }
-                )
+                    composable("second") {
+                        SecondScreen(
+                            nim = mahasiswaNim,
+                            nama = mahasiswaNama,
+                            onBackClick = {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                }
             }
         }
     }
