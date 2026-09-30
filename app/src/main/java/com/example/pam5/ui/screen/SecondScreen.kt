@@ -12,7 +12,8 @@ import androidx.compose.ui.unit.dp
 fun SecondScreen(
     nim: String,
     nama: String,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    onCatalogClick: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -35,6 +36,13 @@ fun SecondScreen(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Kembali")
+        }
+
+        Button(
+            onClick = onCatalogClick,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Lihat Katalog Buah")
         }
     }
 }
