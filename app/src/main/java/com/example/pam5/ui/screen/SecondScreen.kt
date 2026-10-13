@@ -6,14 +6,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.pam5.ui.component.ColoredButton
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun SecondScreen(
     nim: String,
     nama: String,
-    onBackClick: () -> Unit,
-    onCatalogClick: () -> Unit
+    onBackClick: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -36,13 +36,6 @@ fun SecondScreen(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Kembali")
-        }
-
-        Button(
-            onClick = onCatalogClick,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Lihat Katalog Buah")
         }
     }
 }
