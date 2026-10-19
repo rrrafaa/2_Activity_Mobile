@@ -1,4 +1,4 @@
-package com.example.pam5.viewmodel
+package com.example.pam5.tugas4.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

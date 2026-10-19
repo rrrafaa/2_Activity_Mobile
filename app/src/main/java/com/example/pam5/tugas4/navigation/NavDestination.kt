@@ -1,4 +1,4 @@
-package com.example.pam5
+package com.example.pam5.tugas4.navigation
 
 object NavDestination {
     const val First = "first_screen"

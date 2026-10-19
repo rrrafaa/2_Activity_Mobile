@@ -1,19 +1,18 @@
-package com.example.pam5.ui.screen
+package com.example.pam5.latihan2.ui.screen
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.pam5.ui.component.ColoredButton
 import androidx.compose.ui.unit.dp
 
+// Latihan 2 (Screen 1: NIM, Nama, Text "Screen 1", Tombol "Ke Halaman 2")
 @Composable
-fun SecondScreen(
+fun Latihan2FirstScreen(
     nim: String,
     nama: String,
-    onBackClick: () -> Unit
+    onNextClick: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -27,15 +26,15 @@ fun SecondScreen(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Text(text = "Screen 2")
+        Text(text = "Screen 1")
 
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(
-            onClick = onBackClick,
+            onClick = onNextClick,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Kembali")
+            Text("Ke Halaman 2")
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.pam5.ui.component
+package com.example.pam5.tugas4.ui.component
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
+// Tugas 4 (Komponen tombol berwarna yang dapat dipakai ulang)
 @Composable
 fun ColoredButton(
     text: String,

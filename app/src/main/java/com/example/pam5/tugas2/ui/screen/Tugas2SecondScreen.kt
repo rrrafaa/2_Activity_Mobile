@@ -1,0 +1,42 @@
+package com.example.pam5.tugas2.ui.screen
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+
+// Tugas 2 (Tampilan Activity 2: NIM, Nama, 1 Label teks kiriman Activity 1)
+@Composable
+fun Tugas2SecondScreen(
+    nim: String,
+    nama: String,
+    label: String,
+    onBackClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(text = "NIM  : $nim")
+        Text(text = "Nama : $nama")
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        Text(text = "Teks dari Activity 1: $label")
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Button(
+            onClick = onBackClick,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Kembali")
+        }
+    }
+}

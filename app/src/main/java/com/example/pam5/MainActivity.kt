@@ -7,9 +7,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.pam5.ui.screen.FirstScreen
-import com.example.pam5.ui.screen.SecondScreen
+import com.example.pam5.tugas4.navigation.NavDestination
+import com.example.pam5.tugas4.ui.screen.Tugas4CounterScreen
+import com.example.pam5.tugas4.ui.screen.Tugas4SecondScreen
 import com.example.pam5.ui.theme.PAM5Theme
+
+// ============================================================
+// Tugas 4 (Membuat aplikasi counter dengan tombol Up, Down, Reset
+//          menggunakan ViewModel, serta menampilkan NIM dan Nama)
+//
+// Activity tugas sebelumnya tetap ada di package masing-masing:
+//  - Tugas 2   -> com.example.pam5.tugas2   (activity/, ui/screen/)
+//  - Latihan 2 -> com.example.pam5.latihan2 (activity/, ui/screen/)
+//  - Tugas 3   -> com.example.pam5.tugas3   (activity/, model/, ui/)
+// ============================================================
 
 class MainActivity : ComponentActivity() {
 
@@ -28,7 +39,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = NavDestination.First
                 ) {
                     composable(NavDestination.First) {
-                        FirstScreen(
+                        Tugas4CounterScreen(
                             nim = mahasiswaNim,
                             nama = mahasiswaNama,
                             onNextClick = {
@@ -37,7 +48,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable(NavDestination.Second) {
-                        SecondScreen(
+                        Tugas4SecondScreen(
                             nim = mahasiswaNim,
                             nama = mahasiswaNama,
                             onBackClick = {

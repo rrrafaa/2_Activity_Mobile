@@ -1,4 +1,4 @@
-package com.example.pam5.model
+package com.example.pam5.tugas3.model
 
 import androidx.annotation.DrawableRes
 

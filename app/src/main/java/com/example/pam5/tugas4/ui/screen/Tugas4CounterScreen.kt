@@ -1,4 +1,8 @@
-package com.example.pam5.ui.screen
+package com.example.pam5.tugas4.ui.screen
+
+import com.example.pam5.tugas4.viewmodel.CounterViewModel
+
+import com.example.pam5.tugas4.ui.component.ColoredButton
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
@@ -16,12 +20,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.pam5.ui.component.ColoredButton
 import com.example.pam5.ui.theme.PAM5Theme
-import com.example.pam5.viewmodel.CounterViewModel
 
+// Tugas 4 (Screen counter: NIM, Nama, tombol Up/Down/Reset dengan ViewModel)
 @Composable
-fun FirstScreen(
+fun Tugas4CounterScreen(
     nim: String,
     nama: String,
     onNextClick: () -> Unit,
@@ -104,9 +107,9 @@ fun FirstScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun FirstScreenPreview() {
+fun Tugas4CounterScreenPreview() {
     PAM5Theme {
-        FirstScreen(
+        Tugas4CounterScreen(
             nim = "245150401111035",
             nama = "Rafa Maritza Hanasaputri",
             onNextClick = {},
